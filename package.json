@@ -1,0 +1,36 @@
+{
+    "homepage": "./",
+    "name": "user-management",
+    "version": "0.2.0",
+    "private": true,
+    "scripts": {
+        "docker-win:up": "docker-compose -f docker-compose.yml up -d ",
+        "docker-win:build": "docker-compose -f docker-compose.yml build ",
+        "docker-win:down": "docker-compose -f docker-compose.yml down ",
+        "docker-win:start-next": "docker exec -it next-container npm run start",
+        "docker-win:start-server": "docker exec -it node-container npm run dev",
+        "docker-win:install-next": "docker exec -it next-container npm install",
+        "docker-win:install-server": "docker exec -it node-container npm install",
+        "docker-win:add-next": "docker exec -it next-container npm add",
+        "docker-win:add-server": "docker exec -it node-container npm add"
+    },
+    "eslintConfig": {
+        "extends": "next-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}
