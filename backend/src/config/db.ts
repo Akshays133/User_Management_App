@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { addDefaultUser } from "../controllers/seedController";
 
 export const connectDB = async (): Promise<void> => {
   try {

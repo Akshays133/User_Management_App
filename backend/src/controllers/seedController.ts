@@ -20,10 +20,10 @@ export const mockUsers: IUser[] = [
 ]
 
 // Add default users
-export const addDefaultUser = async (req: Request, res: Response): Promise<void> => {
+export const addDefaultUser = async (): Promise<void> => {
   const users = await User.find();
   if (users?.length === 0) {
     await User.insertMany(mockUsers)
   }
-  res.json(users);
+  // res.json(users);
 };
